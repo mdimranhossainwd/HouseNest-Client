@@ -11,7 +11,9 @@ const Banner = () => {
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="min-w-md">
-            <h1 className="mb-5 text-5xl font-bold">Welcome to Houzez 2.0</h1>
+            <h1 className="mb-5 text-5xl font-bold">
+              Welcome to HouseNest 2.0
+            </h1>
             <p className="mb-5 text-lg">
               Packed with 100+ new features and improvements, it is the biggest{" "}
               <br />

@@ -3,13 +3,9 @@ const Footer = () => {
     <div className=" bg-base-200 text-base-content">
       <footer className="footer py-10 px-8 md:px-0 container mx-auto">
         <aside>
-          <img
-            className="w-40 h-14 bg-cover"
-            src="https://i.ibb.co/cTdQQc1/asian-logo-1024x291.png"
-            alt=""
-          />
+          <h2 className="text-4xl text-[#0c12b0] font-bold">HouseNest</h2>
           <p>
-            Restourant Industries Ltd.
+            HouseNest Industries Ltd.
             <br />
             Providing reliable tech since 1992
           </p>
@@ -37,7 +33,7 @@ const Footer = () => {
       </footer>
       <hr />
       <p className="text-center pb-8 pt-4">
-        Copyright © 2024 - All right reserved by Restourant Industries Ltd
+        Copyright © 2024 - All right reserved by HouseNest Industries Ltd
       </p>
     </div>
   );

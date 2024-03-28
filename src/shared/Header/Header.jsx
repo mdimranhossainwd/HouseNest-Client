@@ -4,26 +4,26 @@ const Header = () => {
   const Menu = (
     <>
       <NavLink
-        className={({ isActive }) => (isActive ? "text-[#F42643]" : "")}
+        className={({ isActive }) => (isActive ? "text-[#0c12b0]" : "")}
         to="/"
       >
         Home
       </NavLink>
       <NavLink
-        className={({ isActive }) => (isActive ? "text-[#F42643]" : "")}
+        className={({ isActive }) => (isActive ? "text-[#0c12b0]" : "")}
         to="/service"
       >
         All Properties
       </NavLink>
       <NavLink
-        className={({ isActive }) => (isActive ? "text-[#F42643]" : "")}
+        className={({ isActive }) => (isActive ? "text-[#0c12b0]" : "")}
         to="/shop"
       >
         Dashboard
       </NavLink>
 
       <NavLink
-        className={({ isActive }) => (isActive ? "text-[#F42643]" : "")}
+        className={({ isActive }) => (isActive ? "text-[#0c12b0]" : "")}
         to="/contact"
       >
         Login
@@ -58,14 +58,14 @@ const Header = () => {
 
   return (
     <div>
-      <div className="container absolute top-0 left-0 right-0 mx-auto">
-        <div className="navbar py-6 flex items-center">
+      <div className="container  text-black top-0 left-0 right-0 mx-auto">
+        <div className="navbar py-5  flex items-center">
           <div className="navbar-start">
             <div className="dropdown">
               <div
                 tabIndex={0}
                 role="button"
-                className=" text-white mr-28 md:mr-0 lg:hidden"
+                className=" mr-28 md:mr-0 lg:hidden"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -90,13 +90,13 @@ const Header = () => {
               </ul>
             </div>
             <Link hrefLang="index.html">
-              <a href="#" className="text-3xl font-greatVibes font-bold">
+              <a href="#" className="text-4xl  font-greatVibes font-bold">
                 House Nest
               </a>
             </Link>
           </div>
           <div className="navbar-end hidden lg:flex">
-            <ul className="menu menu-horizontal px-1 items-center text-white text-lg gap-5 font-medium">
+            <ul className="menu menu-horizontal px-1 items-center  text-lg gap-5 font-medium">
               {Menu}
             </ul>
           </div>
