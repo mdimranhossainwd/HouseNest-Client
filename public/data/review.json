@@ -1,0 +1,26 @@
+[
+  {
+    "name": "John Doe",
+    "img": "https://www.w3schools.com/howto/img_avatar.png",
+    "description": "Wonderful experience! The room was clean and cozy, and the view from the window was breathtaking.",
+    "room_title": "Ocean View Suite"
+  },
+  {
+    "name": "Jane Smith",
+    "img": "https://plus.unsplash.com/premium_photo-1658527049634-15142565537a?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "description": "Great amenities and excellent service. Loved the spaciousness of the room and the comfortable bed!",
+    "room_title": "Luxury King Room"
+  },
+  {
+    "name": "Sam Johnson",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs6Rsr4pPbvJoyL3EatRIjz8eNxedfFVQXrYCBBwMklM03DkeEqxvZ6j73Zv88d783I4Y&usqp=CAU",
+    "description": "Perfect location and ambiance. The room had a rustic charm, and the staff was very accommodating.",
+    "room_title": "Cottage Retreat"
+  },
+  {
+    "name": "Emily Brown",
+    "img": "https://e7.pngegg.com/pngimages/799/987/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png",
+    "description": "Absolutely loved the design and decor of the room! It felt like a home away from home.",
+    "room_title": "Modern Loft"
+  }
+]
