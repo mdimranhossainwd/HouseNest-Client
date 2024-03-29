@@ -91,7 +91,7 @@ const Header = () => {
             </div>
             <Link hrefLang="index.html">
               <a href="#" className="text-4xl  font-greatVibes font-bold">
-                House Nest
+                HouseNest
               </a>
             </Link>
           </div>
