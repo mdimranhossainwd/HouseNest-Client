@@ -15,7 +15,7 @@ const Review = () => {
       .then((data) => setReview(data));
   }, []);
 
-  console.log(review);
+  // console.log(review);
 
   return (
     <div>
