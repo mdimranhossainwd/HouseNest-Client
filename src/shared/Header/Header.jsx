@@ -11,20 +11,20 @@ const Header = () => {
       </NavLink>
       <NavLink
         className={({ isActive }) => (isActive ? "text-[#0c12b0]" : "")}
-        to="/service"
+        to="/properties"
       >
         All Properties
       </NavLink>
       <NavLink
         className={({ isActive }) => (isActive ? "text-[#0c12b0]" : "")}
-        to="/shop"
+        to="/dashboard"
       >
         Dashboard
       </NavLink>
 
       <NavLink
         className={({ isActive }) => (isActive ? "text-[#0c12b0]" : "")}
-        to="/contact"
+        to="/login"
       >
         Login
       </NavLink>
