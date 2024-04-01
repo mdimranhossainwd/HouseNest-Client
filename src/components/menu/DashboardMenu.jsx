@@ -35,7 +35,7 @@ const DashboardMenu = () => {
             </li>
 
             <li>
-              <NavLink to="/dashboard/profile">My Profile</NavLink>
+              <NavLink to="profile">My Profile</NavLink>
             </li>
             <li>
               <NavLink to="/dashboard/wishlist">Wishlist</NavLink>

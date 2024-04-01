@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import Profile from "../components/common/Profile";
 import SignInForm from "../form/auth/SignInForm";
 import SignUpForm from "../form/auth/SignUpForm";
 import DashboardPages from "../pages/DashboardPages";
@@ -38,6 +39,12 @@ export const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <DashboardPages />,
+    children: [
+      {
+        path: "profile",
+        element: <Profile />,
+      },
+    ],
   },
   {
     path: "/login",
