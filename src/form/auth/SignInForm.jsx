@@ -1,8 +1,39 @@
-import { Link, NavLink } from "react-router-dom";
-
+import { Helmet } from "react-helmet-async";
+import toast from "react-hot-toast";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 const SignInForm = () => {
+  const { login, handleGoogle } = useAuth();
+  const navigate = useNavigate();
+
+  const handleToLogin = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    login(email, password)
+      .then((res) => {
+        toast.success("User Login Success");
+        console.log(res);
+      })
+      .catch((error) => console.log(error));
+  };
+
+  const clickToGoogle = () => {
+    handleGoogle()
+      .then((res) => {
+        console.log(res);
+        toast.success("Google Login Successfully");
+        navigate("/");
+      })
+      .catch((error) => console.log(error));
+  };
+
   return (
     <div>
+      <Helmet>
+        <title>HouseNest || Sign In Page</title>
+      </Helmet>
       <div
         className="min-h-screen bg-cover bg-no-repeat px-6 md:px-0"
         style={{
@@ -20,7 +51,7 @@ const SignInForm = () => {
                 />
               </div>
               <div className="w-full borderp-4 rounded-lg  sm:p-6 md:p-8 ">
-                <form className="space-y-6" action="#">
+                <form onSubmit={handleToLogin} className="space-y-6" action="#">
                   <h5 className="text-4xl text-center font-bold text-[#151515] ">
                     Log In
                   </h5>
@@ -73,7 +104,10 @@ const SignInForm = () => {
                       Or sign in with
                     </a>
                   </div>
-                  <div className="flex items-center gap-8 text-md py-2 mx-10 text-center justify-center  border-2">
+                  <div
+                    onClick={clickToGoogle}
+                    className="flex items-center gap-8 text-md py-2 mx-10 text-center justify-center  border-2"
+                  >
                     <Link>
                       <div className="flex items-center gap-4">
                         <img

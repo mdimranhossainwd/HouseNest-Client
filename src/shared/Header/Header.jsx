@@ -1,6 +1,14 @@
 import { Link, NavLink } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 
 const Header = () => {
+  const { user, logOut } = useAuth();
+  const handleLogOut = () => {
+    logOut()
+      .then((res) => {})
+      .catch((error) => console.log(error));
+  };
+
   const Menu = (
     <>
       <NavLink
@@ -15,21 +23,8 @@ const Header = () => {
       >
         All Properties
       </NavLink>
-      <NavLink
-        className={({ isActive }) => (isActive ? "text-[#0c12b0]" : "")}
-        to="/dashboard"
-      >
-        Dashboard
-      </NavLink>
 
-      <NavLink
-        className={({ isActive }) => (isActive ? "text-[#0c12b0]" : "")}
-        to="/login"
-      >
-        Login
-      </NavLink>
-
-      {/* {user?.email ? (
+      {user?.email ? (
         <>
           <NavLink
             className={({ isActive }) => (isActive ? "text-[#F42643]" : "")}
@@ -37,13 +32,6 @@ const Header = () => {
           >
             Dashboard
           </NavLink>
-
-          <NavLink className="bg-[#F42643] p-3 flex rounded-full border ">
-            <LuShoppingCart />
-          </NavLink>
-          <div className=" bg-white text-black px-1 text-sm font-bold rounded-full absolute right-[104px] top-14">
-            {cart.length}
-          </div>
         </>
       ) : (
         <NavLink
@@ -52,7 +40,7 @@ const Header = () => {
         >
           Login
         </NavLink>
-      )} */}
+      )}
     </>
   );
 
@@ -104,7 +92,7 @@ const Header = () => {
             </ul>
           </div>
 
-          {/* <>
+          <>
             {user?.email ? (
               <>
                 <div className="dropdown dropdown-end ml-28 md:ml-12">
@@ -136,7 +124,7 @@ const Header = () => {
             ) : (
               ""
             )}
-          </> */}
+          </>
         </div>
       </div>
     </div>
