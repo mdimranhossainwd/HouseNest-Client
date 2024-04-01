@@ -6,8 +6,7 @@ import RoomReview from "./RoomReview";
 
 const roominfoDetailsPage = () => {
   const roominfo = useLoaderData();
-  console.log(roominfo);
-  let [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>

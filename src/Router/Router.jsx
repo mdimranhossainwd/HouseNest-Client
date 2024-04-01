@@ -5,6 +5,7 @@ import HomePages from "../pages/HomePages";
 import MainLayout from "../pages/MainLayout";
 import RoomDetailsPage from "../shared/Room/RoomDetailsPage";
 import RoomReview from "../shared/Room/RoomReview";
+import PrivateRouter from "./PrivateRouter";
 
 export const router = createBrowserRouter([
   {
@@ -17,7 +18,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/roominfo/:id",
-        element: <RoomDetailsPage />,
+        element: (
+          <PrivateRouter>
+            <RoomDetailsPage />
+          </PrivateRouter>
+        ),
         loader: ({ params }) =>
           fetch(
             `http://localhost:5000/housenest/v1/advertisement/${params.id}`
