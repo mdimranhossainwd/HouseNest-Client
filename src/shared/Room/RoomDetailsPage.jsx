@@ -1,12 +1,37 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
+import toast from "react-hot-toast";
 import { IoLocationSharp } from "react-icons/io5";
 import { useLoaderData } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
+import useAxios from "../../hooks/useAxios";
 import RoomReview from "./RoomReview";
-
 const roominfoDetailsPage = () => {
+  const { user } = useAuth();
+  const axios = useAxios();
   const roominfo = useLoaderData();
   const [isOpen, setIsOpen] = useState(false);
+
+  const { _id, img, pricing, location, verification_status } = roominfo || {};
+
+  const handleAddWishlist = (e) => {
+    if (user && user?.email) {
+      const WishlistInfo = {
+        wishlistID: _id,
+        img,
+        pricing,
+        location,
+        verification_status,
+        user: user?.email,
+      };
+      axios.post("/wishlists", WishlistInfo).then((res) => {
+        console.log(res.data);
+        if (res.data.insertedId) {
+          toast.success("This Property Added to Wishlist");
+        }
+      });
+    }
+  };
 
   return (
     <>
@@ -74,7 +99,10 @@ const roominfoDetailsPage = () => {
               that is not just a roominfo but a curated experience.
             </p>
           </div>
-          <button className="bg-blue-600 text-white px-4 py-2 border-0 rounded-md mt-12 border-none">
+          <button
+            onClick={handleAddWishlist}
+            className="bg-blue-600 text-white px-4 py-2 border-0 rounded-md mt-12 border-none"
+          >
             Add To Wishlist
           </button>
           <button
