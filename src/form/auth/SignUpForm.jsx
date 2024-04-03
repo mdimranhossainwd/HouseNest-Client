@@ -2,10 +2,12 @@ import { Helmet } from "react-helmet-async";
 import toast from "react-hot-toast";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import useAxios from "../../hooks/useAxios";
 
 const SignUpForm = () => {
   const { createUser, handleGoogle, user } = useAuth();
   const navigate = useNavigate();
+  const axios = useAxios();
   const handleSignUp = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -13,11 +15,22 @@ const SignUpForm = () => {
     const email = form.email.value;
     const password = form.password.value;
 
-    createUser(email, password)
+    createUser(email, password, name)
       .then((res) => {
         console.log(res.user);
-        toast.success("User Created Successfully");
-        navigate("/");
+
+        const user = res.user;
+        const allUserInfo = {
+          displayName: name,
+          mail: user?.email,
+        };
+
+        axios.post("/users", allUserInfo).then((res) => {
+          if (res.data.insertedId) {
+            toast.success("User Sign-Up Successfully");
+            navigate("/");
+          }
+        });
       })
       .catch((error) => console.log(error));
   };
@@ -26,8 +39,18 @@ const SignUpForm = () => {
     handleGoogle()
       .then((res) => {
         console.log(res);
-        toast.success("Google SignUp Successfully");
-        navigate("/");
+
+        const user = res.user;
+        const mail = user.email;
+        const name = user.displayName;
+        const userInfo = { mail, name };
+
+        axios.post("/users", userInfo).then((res) => {
+          if (res.data.insertedId) {
+            toast.success("Google SignUp Successfully");
+            navigate("/");
+          }
+        });
       })
       .catch((error) => console.log(error));
   };

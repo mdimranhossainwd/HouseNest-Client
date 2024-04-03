@@ -5,6 +5,7 @@ import SignUpForm from "../form/auth/SignUpForm";
 import DashboardPages from "../pages/DashboardPages";
 import HomePages from "../pages/HomePages";
 import MainLayout from "../pages/MainLayout";
+import WishlistPage from "../pages/WishlistPage";
 import RoomDetailsPage from "../shared/Room/RoomDetailsPage";
 import RoomReview from "../shared/Room/RoomReview";
 import PrivateRouter from "./PrivateRouter";
@@ -43,6 +44,10 @@ export const router = createBrowserRouter([
       {
         path: "profile",
         element: <Profile />,
+      },
+      {
+        path: "wishlist",
+        element: <WishlistPage />,
       },
     ],
   },

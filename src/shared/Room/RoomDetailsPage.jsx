@@ -20,12 +20,14 @@ const roominfoDetailsPage = () => {
         wishlistID: _id,
         img,
         pricing,
+        name: user?.displayName,
+        photo: user?.photoURL,
+        email: user?.email,
         location,
         verification_status,
         user: user?.email,
       };
       axios.post("/wishlists", WishlistInfo).then((res) => {
-        console.log(res.data);
         if (res.data.insertedId) {
           toast.success("This Property Added to Wishlist");
         }

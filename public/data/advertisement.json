@@ -1,0 +1,57 @@
+{
+  "img": "https://i.ibb.co/DzwLWRG/608b14cda47dc3d946bb454b1f163ec9.jpg",
+  "title": "Majestic Manor",
+  "pricing": {
+    "price": "$600,000",
+    "currency": "USD"
+  },
+  "location": {
+    "city": "Asheville, North Carolina",
+    "state": "North Carolina",
+    "country": " United States"
+  },
+  "verification_status": "Pending"
+}
+{
+   
+  "img": "https://i.ibb.co/yYh4rW4/867650cfb66c3f61b1bd9baeb55e2e9c.jpg",
+  "title": "Regal Residence",
+  "pricing": {
+    "price": "$130,000",
+    "currency": "USD"
+  },
+  "location": {
+    "city": "Bandar Seri Begawan",
+    "state": "Brunei-Muara District",
+    "country": "Brunei"
+  },
+  "verification_status": "Done"
+},
+{
+  "img": "https://i.ibb.co/NtH3x0H/5188b47ed28865e06aa9d93891273447.jpg",
+  "title": "Supreme Citadel",
+  "pricing": {
+    "price": "$800,000",
+    "currency": "USD"
+  },
+  "location": {
+    "city": "Istana Nurul Iman Palace",
+    "state": "Maharashtra",
+    "country": "London"
+  },
+  "verification_status": "Done"
+},
+{
+  "img": "https://i.ibb.co/6D4s4tq/8e1f2f838bedc6b14a8032a01f019fb2.jpg",
+  "title": "Grandiose Abode",
+  "pricing": {
+    "price": "$500,000",
+    "currency": "USD"
+  },
+  "location": {
+    "city": "Versailles",
+    "state": "Windermere, Florida",
+    "country": "United States"
+  },
+  "verification_status": "Pending"
+}

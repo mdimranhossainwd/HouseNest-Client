@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const DashboardMenu = () => {
   return (
     <div>
-      <div className="w-64 min-h-full bg-[#00aeef] text-white">
+      <div className="md:w-64 min-h-full bg-[#00aeef] text-white">
         <ul className="menu p-4 text-lg">
           <h2 className="text-5xl items-center flex font-semibold font-greatVibes ">
             HouseNest
@@ -38,7 +38,7 @@ const DashboardMenu = () => {
               <NavLink to="profile">My Profile</NavLink>
             </li>
             <li>
-              <NavLink to="/dashboard/wishlist">Wishlist</NavLink>
+              <NavLink to="wishlist">Wishlist</NavLink>
             </li>
             <li>
               <NavLink to="/dashboard/myreview">My Review</NavLink>
