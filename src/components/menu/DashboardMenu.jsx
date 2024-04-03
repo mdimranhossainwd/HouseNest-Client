@@ -31,7 +31,7 @@ const DashboardMenu = () => {
               <NavLink to="brougth">Property Brougth</NavLink>
             </li>
             <li>
-              <NavLink to="/dashboard/addreviews">Add Reviews</NavLink>
+              <NavLink to="addreview">Add Reviews</NavLink>
             </li>
 
             <li>
