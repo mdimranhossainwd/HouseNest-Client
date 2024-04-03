@@ -7,7 +7,7 @@ const RoomCard = ({ roominfo }) => {
 
   return (
     <div>
-      <div className="relaive">
+      <div className="">
         <img src={roominfo?.img} className=" h-48 object-cover w-full" alt="" />
 
         <div className="text-lg px-3 py-4 font-medium space-y-2">

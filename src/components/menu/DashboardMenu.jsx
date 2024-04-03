@@ -28,7 +28,7 @@ const DashboardMenu = () => {
 
             <div className="divider"></div>
             <li>
-              <NavLink to="/dashboard/brougth">Property Brougth</NavLink>
+              <NavLink to="brougth">Property Brougth</NavLink>
             </li>
             <li>
               <NavLink to="/dashboard/addreviews">Add Reviews</NavLink>

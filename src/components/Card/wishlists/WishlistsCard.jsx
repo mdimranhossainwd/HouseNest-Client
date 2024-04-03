@@ -1,4 +1,5 @@
 import { IoLocationSharp } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const WishlistsCard = ({ room }) => {
   const {
@@ -42,9 +43,11 @@ const WishlistsCard = ({ room }) => {
           </div>
         </div>
         <div className="-mt-8">
-          <button className="bg-blue-600 ml-5 -mb-8 block text-white px-4 py-2 border-0 rounded-md mt-12 border-none">
-            Make Offer
-          </button>
+          <Link to={`/dashboard/makeoffer/${room._id}`}>
+            <button className="bg-blue-600 ml-5 -mb-8 block text-white px-4 py-2 border-0 rounded-md mt-12 border-none">
+              Make Offer
+            </button>
+          </Link>
           <button className="bg-blue-600 block text-white px-7 py-2 ml-6 border-0 rounded-md mt-12 border-none">
             Remove
           </button>

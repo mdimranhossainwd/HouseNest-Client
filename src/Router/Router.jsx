@@ -1,5 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
+import Property from "../components/Card/Property/Property";
 import Profile from "../components/common/Profile";
+import MakeAnOfferForm from "../form/MakeAnOfferForm";
 import SignInForm from "../form/auth/SignInForm";
 import SignUpForm from "../form/auth/SignUpForm";
 import DashboardPages from "../pages/DashboardPages";
@@ -48,6 +50,18 @@ export const router = createBrowserRouter([
       {
         path: "wishlist",
         element: <WishlistPage />,
+      },
+      {
+        path: "brougth",
+        element: <Property />,
+      },
+      {
+        path: "/dashboard/makeoffer/:id",
+        element: <MakeAnOfferForm />,
+        loader: ({ params }) =>
+          fetch(
+            `http://localhost:5000/housenest/api/v1/wishlists/${params.id}`
+          ),
       },
     ],
   },
