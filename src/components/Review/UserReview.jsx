@@ -16,7 +16,7 @@ const UserReview = () => {
     const star = form.star.value;
 
     const reviewData = { email: user?.email, title, name, review, date, star };
-    console.log(reviewData);
+
     axios
       .post("/review", reviewData)
       .then((res) => {

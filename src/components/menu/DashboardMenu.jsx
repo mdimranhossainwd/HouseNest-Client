@@ -41,7 +41,7 @@ const DashboardMenu = () => {
               <NavLink to="wishlist">Wishlist</NavLink>
             </li>
             <li>
-              <NavLink to="/dashboard/myreview">My Review</NavLink>
+              <NavLink to="myreview">My Review</NavLink>
             </li>
 
             <div className="divider"></div>

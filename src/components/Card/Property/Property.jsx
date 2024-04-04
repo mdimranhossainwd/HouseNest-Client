@@ -14,7 +14,7 @@ const Property = () => {
     queryFn: offerProperty,
   });
   return (
-    <div>
+    <div className="">
       <div className="container mx-auto mt-12">
         <h2 className="text-4xl font-semibold text-center">Property Brougth</h2>
       </div>
