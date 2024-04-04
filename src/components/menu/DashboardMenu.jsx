@@ -5,8 +5,6 @@ import AgentMenu from "./AgentMenu";
 
 const DashboardMenu = () => {
   const [role] = useRole();
-  console.log(role);
-
   return (
     <div>
       <div className="md:w-64 min-h-screen bg-[#00aeef] text-white">
@@ -19,7 +17,6 @@ const DashboardMenu = () => {
           <>
             {role === "admin" && <AdminMenu />}
 
-            <div className="divider"></div>
             <li>
               <NavLink to="brougth">Property Brougth</NavLink>
             </li>
@@ -56,7 +53,7 @@ const DashboardMenu = () => {
             </li>
           </> */}
           {/* shared nav links */}
-          {/* <div className="divider"></div> */}
+          <div className="divider"></div>
           <li>
             <NavLink to="/">Home</NavLink>
           </li>

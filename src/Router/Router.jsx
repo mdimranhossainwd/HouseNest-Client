@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Property from "../components/Card/Property/Property";
 import MyPreviewPage from "../components/Review/MyPreviewPage";
 import UserReview from "../components/Review/UserReview";
+import AProfile from "../components/common/AProfile";
 import Profile from "../components/common/Profile";
 import MakeAnOfferForm from "../form/MakeAnOfferForm";
 import SignInForm from "../form/auth/SignInForm";
@@ -64,6 +65,10 @@ export const router = createBrowserRouter([
       {
         path: "myreview",
         element: <MyPreviewPage />,
+      },
+      {
+        path: "agentprofile",
+        element: <AProfile />,
       },
       {
         path: "/dashboard/makeoffer/:id",

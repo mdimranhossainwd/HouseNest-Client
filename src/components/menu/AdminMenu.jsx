@@ -15,6 +15,8 @@ const AdminMenu = () => {
       <li>
         <NavLink to="/dashboard/adminreviews">Manage Reviews</NavLink>
       </li>
+
+      <div className="divider"></div>
     </div>
   );
 };

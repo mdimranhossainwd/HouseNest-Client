@@ -4,7 +4,7 @@ const AgentMenu = () => {
   return (
     <div>
       <li>
-        <NavLink to="/dashboard/agentprofile">Agent Profile</NavLink>
+        <NavLink to="agentprofile">Agent Profile</NavLink>
       </li>
       <li>
         <NavLink to="/dashboard/addproperty">Add Property</NavLink>
