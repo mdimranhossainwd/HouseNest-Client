@@ -1,0 +1,14 @@
+[
+  {
+    "email": "adminhouse@gmail.com",
+    "photoURL": "https://t4.ftcdn.net/jpg/02/27/45/09/360_F_227450952_KQCMShHPOPebUXklULsKsROk5AvN6H1H.jpg",
+    "role": "admin",
+    "displayName": "Admin House"
+  },
+  {
+    "email": "agenthouse@gmail.com",
+    "photoURL": "https://empire-s3-production.bobvila.com/articles/wp-content/uploads/2021/10/The-Best-Online-Real-Estate-School-Options.jpg",
+    "role": "agent",
+    "displayName": "Agent House"
+  }
+]
