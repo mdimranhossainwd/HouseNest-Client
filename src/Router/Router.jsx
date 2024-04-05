@@ -4,6 +4,7 @@ import MyPreviewPage from "../components/Review/MyPreviewPage";
 import UserReview from "../components/Review/UserReview";
 import AProfile from "../components/common/AProfile";
 import Profile from "../components/common/Profile";
+import AddProperty from "../form/AddProperty";
 import MakeAnOfferForm from "../form/MakeAnOfferForm";
 import SignInForm from "../form/auth/SignInForm";
 import SignUpForm from "../form/auth/SignUpForm";
@@ -65,6 +66,10 @@ export const router = createBrowserRouter([
       {
         path: "myreview",
         element: <MyPreviewPage />,
+      },
+      {
+        path: "addproperty",
+        element: <AddProperty />,
       },
       {
         path: "agentprofile",

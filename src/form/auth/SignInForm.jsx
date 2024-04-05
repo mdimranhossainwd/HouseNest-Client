@@ -14,6 +14,7 @@ const SignInForm = () => {
     login(email, password)
       .then((res) => {
         toast.success("User Login Success");
+        navigate("/");
         console.log(res);
       })
       .catch((error) => console.log(error));

@@ -4,7 +4,6 @@ import CommonHeading from "../shared/Heading/CommonHeading";
 
 const WishlistPage = () => {
   const [room] = useRoom();
-  console.log(room);
 
   return (
     <div>

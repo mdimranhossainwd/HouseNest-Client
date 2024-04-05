@@ -7,7 +7,7 @@ const AgentMenu = () => {
         <NavLink to="agentprofile">Agent Profile</NavLink>
       </li>
       <li>
-        <NavLink to="/dashboard/addproperty">Add Property</NavLink>
+        <NavLink to="addproperty">Add Property</NavLink>
       </li>
 
       <li>
