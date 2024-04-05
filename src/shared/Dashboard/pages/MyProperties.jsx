@@ -1,6 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
+import toast from "react-hot-toast";
 import { GrUpdate } from "react-icons/gr";
+
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { NavLink } from "react-router-dom";
 import useAxios from "../../../hooks/useAxios";
 
 const MyProperties = () => {
@@ -16,7 +19,14 @@ const MyProperties = () => {
     queryFn: getProperty,
   });
 
-  console.log(propertyInfo);
+  const handleDelete = (id) => {
+    axios.delete(`/addproperty/${id}`).then((res) => {
+      if (res.data.deletedCount > 0) {
+        toast.success("Delete This Property");
+        refetch();
+      }
+    });
+  };
 
   return (
     <div className="mx-6">
@@ -62,12 +72,17 @@ const MyProperties = () => {
                 <td className="text-md font-semibold">{item.agent}</td>
                 <td className="text-md font-semibold"> {item.location}</td>
                 <th>
-                  <button className="btn btn-ghost btn-lg">
-                    <GrUpdate />
-                  </button>
+                  <NavLink to={`/dashboard/updateproperty/${item._id}`}>
+                    <button className="btn btn-ghost btn-lg">
+                      <GrUpdate />
+                    </button>
+                  </NavLink>
                 </th>
                 <th>
-                  <button className="btn btn-ghost btn-lg">
+                  <button
+                    onClick={() => handleDelete(item._id)}
+                    className="btn btn-ghost btn-lg"
+                  >
                     <RiDeleteBin6Line />
                   </button>
                 </th>

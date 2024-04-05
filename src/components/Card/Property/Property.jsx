@@ -1,11 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
+import useAuth from "../../../hooks/useAuth";
 import useAxios from "../../../hooks/useAxios";
 import PropertyCard from "../PropertyCard";
 
 const Property = () => {
+  const { user } = useAuth();
   const axios = useAxios();
   const offerProperty = async () => {
-    const res = axios.get("/offer");
+    const res = axios.get(`/offer?email=${user.email}`);
     return res;
   };
 
@@ -14,7 +16,7 @@ const Property = () => {
     queryFn: offerProperty,
   });
   return (
-    <div className="">
+    <div className="mx-3">
       <div className="container mx-auto mt-12">
         <h2 className="text-4xl font-semibold text-center">Property Brougth</h2>
       </div>

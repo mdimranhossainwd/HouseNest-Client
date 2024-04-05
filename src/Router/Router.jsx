@@ -6,6 +6,7 @@ import AProfile from "../components/common/AProfile";
 import Profile from "../components/common/Profile";
 import AddProperty from "../form/AddProperty";
 import MakeAnOfferForm from "../form/MakeAnOfferForm";
+import UpdateForm from "../form/UpdateForm";
 import SignInForm from "../form/auth/SignInForm";
 import SignUpForm from "../form/auth/SignUpForm";
 import DashboardPages from "../pages/DashboardPages";
@@ -76,6 +77,16 @@ export const router = createBrowserRouter([
         path: "myproperties",
         element: <MyProperties />,
       },
+
+      {
+        path: "/dashboard/updateproperty/:id",
+        element: <UpdateForm />,
+        loader: ({ params }) =>
+          fetch(
+            `http://localhost:5000/housenest/api/v1/addproperty/${params.id}`
+          ),
+      },
+
       {
         path: "agentprofile",
         element: <AProfile />,
