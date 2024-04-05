@@ -4,7 +4,7 @@ import DashboardMenu from "../components/menu/DashboardMenu";
 const DashboardPages = () => {
   return (
     <>
-      <div className="lg:flex gap-5">
+      <div className="lg:flex ">
         <div className="bg-[#F8F8F8] min-h-full">
           <DashboardMenu />
         </div>
