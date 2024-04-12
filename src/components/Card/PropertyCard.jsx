@@ -16,6 +16,8 @@ const PropertyCard = ({ property }) => {
     buyername,
   } = property || {};
 
+  console.log(property);
+
   return (
     <div>
       <div className="mt-10">
@@ -33,7 +35,10 @@ const PropertyCard = ({ property }) => {
         </div>
         <div className="text-lg font-medium px-3">
           <p className="mb-5">Offer Amount :- {amount}</p>
-          <Link className="btn-outline rouded-md justify-center border bg-blue-600 px-4 py-2 mx-auto flex items-center text-center text-white font-medium">
+          <Link
+            to="/dashboard/payment"
+            className="btn-outline rouded-md justify-center border bg-blue-600 px-4 py-2 mx-auto flex items-center text-center text-white font-medium"
+          >
             Payy
           </Link>
         </div>

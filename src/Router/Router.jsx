@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Property from "../components/Card/Property/Property";
+import Payment from "../components/Payment/Payment";
 import MyPreviewPage from "../components/Review/MyPreviewPage";
 import UserReview from "../components/Review/UserReview";
 import AProfile from "../components/common/AProfile";
@@ -73,9 +74,14 @@ export const router = createBrowserRouter([
         path: "addproperty",
         element: <AddProperty />,
       },
+
       {
         path: "myproperties",
         element: <MyProperties />,
+      },
+      {
+        path: "/dashboard/payment",
+        element: <Payment />,
       },
 
       {
