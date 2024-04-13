@@ -4,7 +4,7 @@ const AdminMenu = () => {
   return (
     <div>
       <li>
-        <NavLink to="/dashboard/admin">Admin Profile</NavLink>
+        <NavLink to="/dashboard/adminprofile">Admin Profile</NavLink>
       </li>
       <li>
         <NavLink to="/dashboard/manageproperties">Manage Properties</NavLink>

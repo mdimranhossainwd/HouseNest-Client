@@ -1,6 +1,6 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useEffect, useState } from "react";
-import toast from "react-hot-toast";
+import Swal from "sweetalert2";
 import useAuth from "../hooks/useAuth";
 import useAxios from "../hooks/useAxios";
 
@@ -68,13 +68,20 @@ const CheckOutForm = () => {
           status: "success",
         };
 
-        console.log(paymentAll);
-
         try {
           const res = await axios.post("/payment", paymentAll);
           if (res?.data?.result?.insertedId) {
             refetch();
-            toast.success("Payment Successfully");
+
+            Swal.fire({
+              title: "Paymnet Successfully ",
+              text: "Your document has unsaved changes. Discard or save them as a new page to continue.",
+              icon: "success",
+              timer: 1000,
+              showConfirmButton: false,
+            });
+
+            // toast.success("Payment Successfully");
           }
         } catch (error) {
           console.log("Payment Error", error);
@@ -104,7 +111,7 @@ const CheckOutForm = () => {
           }}
         />
         <button
-          className="bg-[#1F2937] px-9 mt-12 w-full mx-auto text-md space-x-2 font-medium py-3 text-[#F42643] border-0 rounded-md"
+          className="bg-blue-600 px-9 mt-12 w-full mx-auto text-md space-x-2 font-medium py-3 text-white border-0 rounded-md"
           type="submit"
         >
           Pay
