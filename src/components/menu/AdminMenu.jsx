@@ -13,7 +13,7 @@ const AdminMenu = () => {
         <NavLink to="/dashboard/adminuser">Manage Users</NavLink>
       </li>
       <li>
-        <NavLink to="/dashboard/adminreviews">Manage Reviews</NavLink>
+        <NavLink to="/dashboard/managereviews">Manage Reviews</NavLink>
       </li>
 
       <div className="divider"></div>

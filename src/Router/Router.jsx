@@ -15,6 +15,7 @@ import HomePages from "../pages/HomePages";
 import MainLayout from "../pages/MainLayout";
 import WishlistPage from "../pages/WishlistPage";
 import AdminProfile from "../shared/Dashboard/admin/AdminProfile";
+import ManagePropertiesPage from "../shared/Dashboard/admin/ManagePropertiesPage";
 import UserInfo from "../shared/Dashboard/admin/UserInfo";
 import MyProperties from "../shared/Dashboard/pages/MyProperties";
 import RoomDetailsPage from "../shared/Room/RoomDetailsPage";
@@ -67,6 +68,14 @@ export const router = createBrowserRouter([
       {
         path: "addreview",
         element: <UserReview />,
+      },
+      {
+        path: "managereviews",
+        element: <MyPreviewPage />,
+      },
+      {
+        path: "manageproperties",
+        element: <ManagePropertiesPage />,
       },
       {
         path: "myreview",
