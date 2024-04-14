@@ -6,9 +6,9 @@
     "displayName": "Admin House"
   },
   {
-    "email": "agenthouse@gmail.com",
     "photoURL": "https://empire-s3-production.bobvila.com/articles/wp-content/uploads/2021/10/The-Best-Online-Real-Estate-School-Options.jpg",
     "role": "agent",
-    "displayName": "Agent House"
+    "displayName": "Agent House",
+    "mail": "agenthouse@gmail.com"
   }
 ]

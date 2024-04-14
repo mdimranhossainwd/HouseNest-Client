@@ -15,6 +15,7 @@ import HomePages from "../pages/HomePages";
 import MainLayout from "../pages/MainLayout";
 import WishlistPage from "../pages/WishlistPage";
 import AdminProfile from "../shared/Dashboard/admin/AdminProfile";
+import UserInfo from "../shared/Dashboard/admin/UserInfo";
 import MyProperties from "../shared/Dashboard/pages/MyProperties";
 import RoomDetailsPage from "../shared/Room/RoomDetailsPage";
 import RoomReview from "../shared/Room/RoomReview";
@@ -83,6 +84,10 @@ export const router = createBrowserRouter([
       {
         path: "adminprofile",
         element: <AdminProfile />,
+      },
+      {
+        path: "adminuser",
+        element: <UserInfo />,
       },
       {
         path: "/dashboard/payment",

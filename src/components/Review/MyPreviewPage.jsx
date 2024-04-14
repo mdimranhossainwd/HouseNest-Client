@@ -1,12 +1,14 @@
 import { useState } from "react";
+import useAuth from "../../hooks/useAuth";
 import useAxios from "../../hooks/useAxios";
 import UserReviewCard from "./UserReviewCard";
 
 const MyPreviewPage = () => {
+  const { user } = useAuth();
   const axios = useAxios();
   const [review, setIsReview] = useState([]);
 
-  axios.get("/review").then((res) => {
+  axios.get(`/review?email=${user?.email}`).then((res) => {
     setIsReview(res.data);
   });
 
