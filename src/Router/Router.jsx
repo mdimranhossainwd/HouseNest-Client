@@ -10,6 +10,7 @@ import MakeAnOfferForm from "../form/MakeAnOfferForm";
 import UpdateForm from "../form/UpdateForm";
 import SignInForm from "../form/auth/SignInForm";
 import SignUpForm from "../form/auth/SignUpForm";
+import AllPropertyPage from "../pages/AllPropertyPage";
 import DashboardPages from "../pages/DashboardPages";
 import HomePages from "../pages/HomePages";
 import MainLayout from "../pages/MainLayout";
@@ -46,6 +47,10 @@ export const router = createBrowserRouter([
       {
         path: "/addreview",
         element: <RoomReview />,
+      },
+      {
+        path: "/properties",
+        element: <AllPropertyPage />,
       },
     ],
   },

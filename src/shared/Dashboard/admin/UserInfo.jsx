@@ -41,7 +41,7 @@ const UserInfo = () => {
       if (res.data.modifiedCount > 0) {
         refetch();
         Swal.fire({
-          title: `This user is Admin Now`,
+          title: `This user is Agent Now`,
           text: "Your document has unsaved changes. Discard or save them as a new page to continue.",
           icon: "success",
         });

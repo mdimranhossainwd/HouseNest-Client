@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import { useState } from "react";
 import toast from "react-hot-toast";
 import { FaCheck } from "react-icons/fa";
 import { RxCrossCircled } from "react-icons/rx";
@@ -6,6 +7,8 @@ import useAxios from "../../../hooks/useAxios";
 
 const ManagePropertiesPage = () => {
   const axios = useAxios();
+  const [addedProperties, setAddedProperties] = useState(new Set());
+  const [removeProperties, setRemoveProperties] = useState(new Set());
   const getProperty = async () => {
     const res = axios.get("/addproperty");
     return res;
@@ -21,8 +24,13 @@ const ManagePropertiesPage = () => {
     axios.post("/allproperties", specificProperty).then((res) => {
       if (res.data.insertedId) {
         toast.success("This Property Added to DB !!");
+        setAddedProperties((prev) => new Set([...prev, id]));
       }
     });
+  };
+
+  const handleRejectProperty = (id) => {
+    setRemoveProperties((prev) => new Set([...prev, id]));
   };
 
   return (
@@ -52,17 +60,34 @@ const ManagePropertiesPage = () => {
                 <td className="text-md font-semibold"> {item.location}</td>
                 <td className="text-md font-semibold"> {item.agent}</td>
                 <td className="text-md font-semibold"> {item.email}</td>
+
                 <th>
                   <button
-                    onClick={() => handleAddProperty(item?._id)}
-                    className="btn hover:text-blue-500 text-black btn-ghost btn-lg"
+                    onClick={() => handleAddProperty(item._id)}
+                    className="p-5 hover:text-blue-500 text-black "
+                    disabled={addedProperties.has(item._id)} // Disable button if property is already added
                   >
-                    <FaCheck />
+                    {addedProperties.has(item._id) ? (
+                      <h2 className="text-lg -ml-3 font-semibold text-blue-600">
+                        verify
+                      </h2>
+                    ) : (
+                      <FaCheck />
+                    )}
                   </button>
                 </th>
                 <th>
-                  <button className="btn text-2xl hover:text-blue-500 text-black btn-ghost btn-lg">
-                    <RxCrossCircled />
+                  <button
+                    onClick={() => handleRejectProperty(item._id)}
+                    className="p-5 hover:text-blue-500 text-black"
+                  >
+                    {removeProperties.has(item._id) ? (
+                      <span className="text-red-500 text-md -ml-4">
+                        Rejected
+                      </span>
+                    ) : (
+                      <RxCrossCircled />
+                    )}
                   </button>
                 </th>
               </tr>
