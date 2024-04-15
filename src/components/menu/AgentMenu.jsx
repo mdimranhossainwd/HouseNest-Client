@@ -14,7 +14,7 @@ const AgentMenu = () => {
         <NavLink to="myproperties">My Added Properties</NavLink>
       </li>
       <li>
-        <NavLink to="/dashboard/mysold">My Sold Properties</NavLink>
+        <NavLink to="mysold">My Sold Properties</NavLink>
       </li>
 
       <li>

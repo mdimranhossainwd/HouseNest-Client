@@ -4,6 +4,7 @@ import Swal from "sweetalert2";
 import useAuth from "../hooks/useAuth";
 import useAxios from "../hooks/useAxios";
 
+import { useQuery } from "@tanstack/react-query";
 import useProperty from "../hooks/useProperty";
 const CheckOutForm = () => {
   const stripe = useStripe();
@@ -14,6 +15,15 @@ const CheckOutForm = () => {
   const axios = useAxios();
   const { user } = useAuth();
   const findPrice = property.reduce((total, item) => total + item.price, 0);
+  const offerProperty = async () => {
+    const res = axios.get(`/offer?email=${user.email}`);
+    return res;
+  };
+
+  const { data: propertyData } = useQuery({
+    queryKey: ["propertyInfo"],
+    queryFn: offerProperty,
+  });
 
   useEffect(() => {
     if (findPrice) {
@@ -62,9 +72,12 @@ const CheckOutForm = () => {
           user: user.email,
           price: findPrice,
           date: new Date(),
-          transitions: paymentIntent.id,
-          singleId: property.map((item) => item._id),
-          menuitemID: property.map((item) => item.pricing),
+          singleId: propertyData.data.map((item) => item._id),
+          buyer: propertyData.data.map((item) => item.buyerName),
+          mail: propertyData.data.map((item) => item.email),
+          title: propertyData.data.map((item) => item.title),
+          location: propertyData.data.map((item) => item.location),
+          housePrice: propertyData.data.map((item) => item.amount),
           status: "success",
         };
 

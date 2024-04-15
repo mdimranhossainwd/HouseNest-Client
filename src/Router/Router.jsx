@@ -18,6 +18,7 @@ import WishlistPage from "../pages/WishlistPage";
 import AdminProfile from "../shared/Dashboard/admin/AdminProfile";
 import ManagePropertiesPage from "../shared/Dashboard/admin/ManagePropertiesPage";
 import UserInfo from "../shared/Dashboard/admin/UserInfo";
+import MySolePage from "../shared/Dashboard/agent/MySolePage";
 import MyProperties from "../shared/Dashboard/pages/MyProperties";
 import RoomDetailsPage from "../shared/Room/RoomDetailsPage";
 import RoomReview from "../shared/Room/RoomReview";
@@ -41,7 +42,7 @@ export const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `http://localhost:5000/housenest/v1/advertisement/${params.id}`
+            `https://server-black-iota.vercel.app/housenest/v1/advertisement/${params.id}`
           ),
       },
       {
@@ -73,6 +74,10 @@ export const router = createBrowserRouter([
       {
         path: "addreview",
         element: <UserReview />,
+      },
+      {
+        path: "mysold",
+        element: <MySolePage />,
       },
       {
         path: "managereviews",
@@ -113,7 +118,7 @@ export const router = createBrowserRouter([
         element: <UpdateForm />,
         loader: ({ params }) =>
           fetch(
-            `http://localhost:5000/housenest/api/v1/addproperty/${params.id}`
+            `https://server-black-iota.vercel.app/housenest/api/v1/addproperty/${params.id}`
           ),
       },
 
@@ -126,7 +131,7 @@ export const router = createBrowserRouter([
         element: <MakeAnOfferForm />,
         loader: ({ params }) =>
           fetch(
-            `http://localhost:5000/housenest/api/v1/wishlists/${params.id}`
+            `https://server-black-iota.vercel.app/housenest/api/v1/wishlists/${params.id}`
           ),
       },
     ],

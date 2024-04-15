@@ -15,8 +15,6 @@ const AllPropertyPage = () => {
     queryFn: getProperty,
   });
 
-  console.log(getAllProperty.data);
-
   return (
     <div className="my-12 container mx-auto">
       <CommonHeading

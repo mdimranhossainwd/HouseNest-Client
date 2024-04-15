@@ -2,9 +2,11 @@ import { Helmet } from "react-helmet-async";
 import toast from "react-hot-toast";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import useAxios from "../../hooks/useAxios";
 const SignInForm = () => {
-  const { login, handleGoogle } = useAuth();
+  const { user, login, handleGoogle } = useAuth();
   const navigate = useNavigate();
+  const axios = useAxios();
 
   const handleToLogin = (e) => {
     e.preventDefault();
@@ -13,6 +15,7 @@ const SignInForm = () => {
     const password = form.password.value;
     login(email, password)
       .then((res) => {
+        axios.post("/auth/access-token", user);
         toast.success("User Login Success");
         navigate("/");
         console.log(res);
@@ -23,6 +26,7 @@ const SignInForm = () => {
   const clickToGoogle = () => {
     handleGoogle()
       .then((res) => {
+        axios.post("/auth/access-token", user);
         console.log(res);
         toast.success("Google Login Successfully");
         navigate("/");

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const instance = axios.create({
-  baseURL: "http://localhost:5000/housenest/api/v1",
+  baseURL: "https://server-black-iota.vercel.app/housenest/api/v1",
   withCredentials: true,
 });
 
