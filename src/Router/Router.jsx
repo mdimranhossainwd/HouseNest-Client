@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Property from "../components/Card/Property/Property";
+import Error from "../components/Err/Error";
 import Payment from "../components/Payment/Payment";
 import MyPreviewPage from "../components/Review/MyPreviewPage";
 import UserReview from "../components/Review/UserReview";
@@ -28,6 +29,7 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
+    errorElement: <Error />,
     children: [
       {
         path: "/",
@@ -51,13 +53,18 @@ export const router = createBrowserRouter([
       },
       {
         path: "/properties",
-        element: <AllPropertyPage />,
+        element: (
+          <PrivateRouter>
+            <AllPropertyPage />
+          </PrivateRouter>
+        ),
       },
     ],
   },
   {
     path: "/dashboard",
     element: <DashboardPages />,
+    errorElement: <Error />,
     children: [
       {
         path: "profile",

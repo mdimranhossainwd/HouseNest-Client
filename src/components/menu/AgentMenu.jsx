@@ -16,10 +16,6 @@ const AgentMenu = () => {
       <li>
         <NavLink to="mysold">My Sold Properties</NavLink>
       </li>
-
-      <li>
-        <NavLink to="/dashboard/requested">Requested Properties</NavLink>
-      </li>
     </div>
   );
 };
