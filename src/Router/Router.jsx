@@ -5,6 +5,7 @@ import Payment from "../components/Payment/Payment";
 import MyPreviewPage from "../components/Review/MyPreviewPage";
 import UserReview from "../components/Review/UserReview";
 import AProfile from "../components/common/AProfile";
+import AllReviews from "../components/common/AllReviews";
 import Profile from "../components/common/Profile";
 import AddProperty from "../form/AddProperty";
 import MakeAnOfferForm from "../form/MakeAnOfferForm";
@@ -44,7 +45,7 @@ export const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://server-black-iota.vercel.app/housenest/v1/advertisement/${params.id}`
+            `https://housenest-server.onrender.com/housenest/v1/advertisement/${params.id}`
           ),
       },
       {
@@ -88,7 +89,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "managereviews",
-        element: <MyPreviewPage />,
+        element: <AllReviews />,
       },
       {
         path: "manageproperties",
@@ -125,7 +126,7 @@ export const router = createBrowserRouter([
         element: <UpdateForm />,
         loader: ({ params }) =>
           fetch(
-            `https://server-black-iota.vercel.app/housenest/api/v1/addproperty/${params.id}`
+            `https://housenest-server.onrender.com/housenest/api/v1/addproperty/${params.id}`
           ),
       },
 
@@ -138,7 +139,7 @@ export const router = createBrowserRouter([
         element: <MakeAnOfferForm />,
         loader: ({ params }) =>
           fetch(
-            `https://server-black-iota.vercel.app/housenest/api/v1/wishlists/${params.id}`
+            `https://housenest-server.onrender.com/housenest/api/v1/wishlists/${params.id}`
           ),
       },
     ],
