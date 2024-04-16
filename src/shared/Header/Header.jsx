@@ -23,6 +23,12 @@ const Header = () => {
       >
         All Properties
       </NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? "text-[#0c12b0]" : "")}
+        to="/services"
+      >
+        Service
+      </NavLink>
 
       {user?.email ? (
         <>
