@@ -5,3 +5,16 @@ HouseNest is a modern real estate platform designed to connect property buyers, 
 
 
 ## 🌐 Live Demo: [HouseNest](https://housenest-4791e.web.app/)
+
+
+
+## 🎯 Project Purpose
+
+The objective of HouseNest is to:
+
+- Provide a comprehensive platform for property listings.
+- Facilitate seamless communication between buyers, renters, and sellers.
+- Enhance the property search experience with detailed information and images.
+- Offer a responsive and user-friendly interface for all devices.
+
+---
