@@ -30,3 +30,27 @@ The objective of HouseNest is to:
 - **Responsive Design**: Optimized for desktops, tablets, and mobile devices.
 
 ---
+
+
+## 🛠️ Technologies Used
+
+### Frontend
+
+- **React.js**: For building dynamic and responsive user interfaces.
+- **Vite**: A fast build tool and development server.
+- **Tailwind CSS**: Utility-first CSS framework for rapid UI development.
+
+### Backend
+
+- **Node.js**: JavaScript runtime for building the server-side application.
+- **Express.js**: Web framework for Node.js to handle routing and middleware.
+- **MongoDB**: NoSQL database for storing property listings and user information.
+- **JWT**: 
+
+### Authentication
+
+- **Firebase Authentication**: Secure and reliable user authentication system.
+
+### Deployment
+
+- **Firebase Hosting**: For deploying and hosting the web application.
