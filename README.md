@@ -45,7 +45,7 @@ The objective of HouseNest is to:
 - **Node.js**: JavaScript runtime for building the server-side application.
 - **Express.js**: Web framework for Node.js to handle routing and middleware.
 - **MongoDB**: NoSQL database for storing property listings and user information.
-- **JWT**: 
+- **JWT**: Role-based protected routes
 
 ### Authentication
 
